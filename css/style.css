@@ -52,11 +52,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #aaa;
-    color: #0B173D;
+    border-right: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
+    color: white;
   }
   header ul a{
-      color: #0B173D;
+      color: white;
   }
   nav{
       display: flex;
@@ -75,6 +76,20 @@
   }
   nav > ul {
       line-height: 2em;
+  }
+  #login{
+      color: #0B173D;
+      background-color: #cf9f00;
+      padding: 1rem 2rem;
+      /* border: 2px solid #0B173D; */
+      border: none;
+      border-radius: 4px;
+      box-shadow: inset 0 0 5px #0B173D;
+      
+  }
+  #login:hover{
+    box-shadow: 0 0 5px #cf9f00;
+    border-radius: 4px;
   }
   main{
       width: auto;
@@ -104,7 +119,7 @@
       color: white;
   }
   .container{
-      width: 80%;
+      width: 95%;
       margin: 2em auto;
       height: 80vh;
       font-size: 3em;
@@ -135,7 +150,6 @@
       width: 20vw;
       padding: .8em;
       color: #0B173D;
-      font-weight: bold;
       font-size: 1.5rem;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
@@ -146,12 +160,14 @@
       border: 1px solid #cf9f00;
       border-radius: 4px;
       padding: .8em;
-      color: rgb(36, 87, 96);
+      color: #0B173D;
       font-size:1.5rem ;
-      font-weight: bold;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       border-left: none;
+  }
+  #exerciseSearch:active{
+    background: #cf9f00;
   }
   #exerciseEquipment{
       border-top-right-radius: 0;
