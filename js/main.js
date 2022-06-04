@@ -1,10 +1,10 @@
 document.querySelector('#exerciseSearch').addEventListener('click', searchWorkout)
-
+const myKey = config.rapidKey
 const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
-		'X-RapidAPI-Key': '0d9f2bfba9msh301dcef72f9f8c6p106322jsn86af5eeabee8'
+		'X-RapidAPI-Key': myKey
 	}
 };
 let ul = document.querySelector('.exerciseData')
@@ -83,7 +83,7 @@ async function getQuote(){
         method: 'GET',
         headers: {
             'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com',
-            'X-RapidAPI-Key': '0d9f2bfba9msh301dcef72f9f8c6p106322jsn86af5eeabee8'
+            'X-RapidAPI-Key': myKey
         }
     };
     try{
