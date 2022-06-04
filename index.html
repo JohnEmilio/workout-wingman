@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="workout, exercises, rest API">
+    <title>Workout Wingman! Build a better workout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/89d95f45ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="assets/profile-pic-placeholder.png" alt="profile photo">
+            <h3>Welcome!</h3>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Exercise Log</a></li>
+                <li><a href="#">Recent Activity</a></li>
+                <li><button id="login">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="heading">
+            <h1>Workout Wingman</h1>
+            <span>A workout's best friend</span>
+            <span id="quoteOfTheDay"></span>
+        </div>
+        <section class="container">
+            <div class="inputContainer">
+
+                <span>What are we <span style="color: #cf9f00;">targeting</span> today?</span>
+                    <div class="exerciseDisplay">
+                        <ul class="exerciseData"></ul>
+                        <input id="exerciseInput" type="text" placeholder="Search a body part to continue"><select name="equipment" id="exerciseEquipment">
+                            <option value="assisted">Assisted</option>
+                            <option value="band">Band</option>
+                            <option value="barbell">Barbell</option>
+                            <option value="body weight">Body weight</option>
+                            <option value="bosu ball">Bosu ball</option>
+                            <option value="cable">Cable</option>
+                            <option value="dumbbell">Dumbbell</option>
+                            <option value="elliptical machine">Elliptical machine</option>
+                            <option value="ez barbell">Ez barbell</option>
+                            <option value="hammer">Hammer</option>
+                            <option value="kettlebell">Kettlebell</option>
+                            <option value="leverage machine">Leverage machine</option>
+                            <option value="medicine ball">Medicine ball</option>
+                            <option value="olympic barbell">Olympic barbell</option>
+                            <option value="resistance band">Resistance band</option>
+                            <option value="roller">Roller</option>
+                            <option value="rope">Rope</option>
+                            <option value="skierg machine">Skierg machine</option>
+                            <option value="sled machine">Sled machine</option>
+                            <option value="smith machine">Smith machine</option>
+                            <option value="stability ball">Stability ball</option>
+                            <option value="stationary bike">Stationary bike</option>
+                            <option value="stepmill machine">Stepmill machine</option>
+                            <option value="tire">Tire</option>
+                            <option value="trap bar">Trap bar</option>
+                            <option value="upper body ergometer">Upper body ergometer</option>
+                            <option value="weighted">Weighted</option>
+                            <option value="wheel roller">Wheel roller</option>
+                        </select><!-- 
+                        --><button id="exerciseSearch" type="submit">Search</button>
+                    </div>                    
+            </div>
+            <div>
+                <p>Body parts to search from: <em>back, cardio, chest, lower arms, lower legs, neck, shoulders, upper arms, upper legs, waist</em>.</p>
+            </div>
+            <div>
+                <h2>Today's Workout:</h2>
+                <ul id="exerciseList">
+                    <li>Start searching to add more exercises.</li>
+                    <li><i class="fa-solid fa-plus"></i></li>
+                </ul>
+            </div>
+        </section>
+        <aside>
+            <h3>Recent Activity:</h3>
+            <ul>
+                <li>Log your first workout to see recent activity.</li>
+            </ul>
+        </aside>
+    </main>
+    <form action="" method="get"></form>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
