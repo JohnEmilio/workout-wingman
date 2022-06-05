@@ -78,9 +78,9 @@ async function searchWorkout(){
                     addBtns.forEach(btn => btn.setAttribute('class', 'addBtn'))
 
                     addBtns.forEach(btn => btn.addEventListener('click', (e) => {
-                        console.log(e.target.parentElement.innerText.slice(0,-22))
                         let todaysExercise = document.createElement('li')
                         let todaysExerciseList = document.getElementById('todaysExerciseList')
+
                         todaysExercise.setAttribute('class', 'exercise')
                         todaysExercise.innerText = e.target.parentElement.innerText.slice(0,-22)
                         todaysExerciseList.appendChild(todaysExercise)
