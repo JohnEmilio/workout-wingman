@@ -1,6 +1,6 @@
 module.exports = {
     getIndex: (req, res) => {
-        res.render('index.html')
+        res.send('Hello from the backend')
     },
     logout: async (req, res) => {
         res.send({ msg: false })

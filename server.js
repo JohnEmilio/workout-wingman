@@ -19,7 +19,7 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.user(express.static('public'))
+app.use(express.static('public'))
 
 // Routes
 app.use('/', homeRoutes)
