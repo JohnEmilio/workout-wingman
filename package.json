@@ -1,0 +1,37 @@
+{
+  "name": "ww-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build -- prefix client"
+  },
+  "author": "John Emilio",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^7.2.2",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "moment": "^2.29.4",
+    "mongo-store": "^0.0.2",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "nanoid": "^4.0.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "react-mde": "^11.5.0",
+    "session": "^0.1.0",
+    "showdown": "^2.1.0"
+  }
+}
