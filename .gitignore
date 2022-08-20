@@ -1,4 +1,4 @@
 config.env
 db.js
-/config
+config
 node_modules
