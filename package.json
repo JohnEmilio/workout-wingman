@@ -30,6 +30,7 @@
     "nanoid": "^4.0.0",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
+    "react": "^17.0.2",
     "react-mde": "^11.5.0",
     "session": "^0.1.0",
     "showdown": "^2.1.0"
