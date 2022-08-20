@@ -22,7 +22,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "express-react-views": "^0.11.0",
     "express-session": "^1.17.3",
     "moment": "^2.29.4",
     "mongo-store": "^0.0.2",
