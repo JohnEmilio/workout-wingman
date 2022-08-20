@@ -7,8 +7,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run start"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "John Emilio",
   "license": "ISC",
