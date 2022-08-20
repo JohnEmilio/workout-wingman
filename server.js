@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const dotenv = require('dotenv')
 const connectDB = require("./config/db");
-const homeRoutes = require('./routes/home')
+// const homeRoutes = require('./routes/home')
 const loginRoutes = require('./routes/login')
 const userRoutes = require('./routes/user')
 const path = require('path')
@@ -21,7 +21,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Routes
-app.use('/', homeRoutes)
+// app.use('/', homeRoutes)
 app.use('/login', loginRoutes)
 app.use('/user', userRoutes)
 
