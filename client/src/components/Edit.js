@@ -117,8 +117,6 @@ export default function Exercises() {
     }
 
     async function logCurrentList() {
-        const id = sessionStorage.getItem("editId")
-
         const workout = {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },

@@ -7,7 +7,7 @@ export default function Home() {
         const getHome = async () => {
             try {
                 const data = fetch('/')
-                const res = res.json()
+                const res = data.json()
                 console.log(res)
             } catch (err) {
                 console.error(err)
