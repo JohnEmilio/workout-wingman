@@ -2,3 +2,4 @@
 /config
 config.env
 db.js
+./config/config.env

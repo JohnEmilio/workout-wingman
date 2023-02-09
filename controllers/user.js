@@ -1,6 +1,5 @@
 const User = require('../models/User')
 const Exercise = require('../models/Exercise')
-const bcrypt = require('bcrypt')
 
 module.exports = {
     getExercises: async (req, res) => {
@@ -10,7 +9,6 @@ module.exports = {
             res.send(data)
         } catch (err) {
             console.error(err)
-            // res.redirect('error/404')
         }
     },
     newWorkout: async (req, res) => {
@@ -67,39 +65,3 @@ module.exports = {
         }
     }
 }
-
-// app.post('/user/:id', async (req, res) => {
-//     try {
-//         const user = {
-//             email: req.body.email,
-//             password: req.body.password
-//         }
-//         const dbUser = await User.findOne({ email: user.email })
-//         const comparePass = await bcrypt.compare(user.password, dbUser.password)
-//         if (comparePass) {
-//             res.send(JSON.stringify('Passwords correct'))
-//         }
-//         else {
-//             res.send(JSON.stringify("No such user found"))
-
-//         }
-//     } catch (err) {
-//         console.error(err)
-//     }
-// })
-
-// app.post('/registeruser', async (req, res) => {
-//     try {
-//         const user = {
-//             email: req.body.email,
-//             firstName: req.body.firstName,
-//             lastName: req.body.lastName,
-//             password: await bcrypt.hash(req.body.password, 10),
-//             userId: req.body.userId
-//         }
-//         await User.create(user)
-//         res.send(JSON.stringify(user))
-//     } catch (err) {
-//         console.error(err)
-//     }
-// })
