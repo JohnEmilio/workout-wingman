@@ -64,6 +64,7 @@ export default function Exercises() {
     const val = e.target.value
     const name = e.target.name
     const parentId = e.target.parentNode.id
+
     setCurrentWorkoutList(prevList => {
       return prevList.map(ex => {
         if (ex.id === parentId) {
@@ -178,8 +179,9 @@ export default function Exercises() {
           </ul>
         </div>
         <div id="todaysExercises" className="listContainer">
-          {currentWorkoutList.length > 0 && <h2 className="todayHeader">Today's Workout:</h2>}
+          {currentWorkoutList.length > 0 && <h2 className="todayHeader">Current Workout:</h2>}
           <ul id="todaysExerciseList">
+            
             {currentWorkoutList.map(exercise => {
               return <li key={exercise.id} id={exercise.id} className="currentExercises exercisesList">
                 {exercise.exercise}
@@ -188,9 +190,10 @@ export default function Exercises() {
 
                 <input
                   className="exNumInput"
-                  type="number"
+                  type="text"
                   id="numOfSets"
                   name="sets"
+                  value={exercise.sets}
                   onChange={(e) => changeSetAndReps(e)}
                 />
                 <label htmlFor="sets"># of Sets</label>
@@ -199,9 +202,10 @@ export default function Exercises() {
 
                 <input
                   className="exNumInput"
-                  type="number"
+                  type="text"
                   id="numOfReps"
                   name="reps"
+                  value={exercise.reps}
                   onChange={(e) => changeSetAndReps(e)}
                 />
                 <label htmlFor="reps"># of Reps</label>

@@ -1,25 +1,12 @@
 import { Link } from "react-router-dom"
 import background from "../assets/images/main-background.jpg"
-import { useEffect } from 'react'
 
 export default function Home() {
-    useEffect(() => {
-        const getHome = async () => {
-            try {
-                const data = fetch('/')
-                const res = data.json()
-                console.log(res)
-            } catch (err) {
-                console.error(err)
-            }
-        }
-        getHome()
-    })
-
+    
     return (
         <div className="wrapper">
             <div className="welcome welcomeBg" id="welcomeBg">
-                <img src={background} className="welcomeBackground" />
+                <img src={background} className="welcomeBackground" alt=''/>
                 <div className="welcomeMsg">
                     <h1 className="welcomeHeading">Workout Wingman</h1>
                     <span className="welcomeSubheading">Build a better workout!</span>

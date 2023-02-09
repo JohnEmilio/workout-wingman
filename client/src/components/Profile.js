@@ -17,6 +17,7 @@ export default function Profile() {
             try {
                 const getExs = await fetch('/user', myId)
                 const res = await getExs.json()
+                console.log(res.sort((a, b) => new Date(a.date) - new Date(b.date)))
                 setWorkoutList(res)
             } catch (err) {
                 console.error(err)
@@ -36,8 +37,8 @@ export default function Profile() {
                 console.error(err)
             }
         }
-        getUserData()
         getMyWorkouts()
+        getUserData()
     }, [])
 
     async function deleteWorkout(e) {
@@ -69,7 +70,7 @@ export default function Profile() {
         return (
             <>
                 <div className="userProfileHeader">{currentUser && <h1 >Welcome, {currentUser.firstName[0].toUpperCase() + currentUser.firstName.slice(1)}</h1>}<a href='/user/create' className="createNew"><i className="fa-solid fa-circle-plus"></i> Create New Workout</a></div>
-                {workoutList.length == 0 && <div className='emptyList'>No workouts to show. Use button above to start logging!</div>}
+                {workoutList.length === 0 && <div className='emptyList'>No workouts to show. Use button above to start logging!</div>}
                 <div className='cardContainer'>
                     {workoutList.length > 0 && workoutList.map(workout => {
                         return <ul className='card' id={workout._id} key={workout._id}>
