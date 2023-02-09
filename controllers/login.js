@@ -21,15 +21,14 @@ module.exports = {
             }
         } catch (err) {
             console.error(err)
-            res.redirect('error/404')
         }
     },
     userLogin: async (req, res) => {
         try {
             const dbUser = await User.findOne({ email: req.body.email })
             const comparePass = await bcrypt.compare(req.body.password, dbUser.password)
+            
             if (comparePass) {
-                console.log(dbUser.userId)
                 res.send({ msg: true, userId: dbUser.userId })
             }
             else {
@@ -37,7 +36,6 @@ module.exports = {
             }
         } catch (err) {
             console.error(err)
-            res.redirect('/login')
         }
     }
 }

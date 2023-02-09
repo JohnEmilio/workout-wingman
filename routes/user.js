@@ -10,8 +10,5 @@ router.delete('/log/delete', userController.deleteWorkout)
 router.put('/log/edit', userController.findWorkout)
 router.put('/log/edit/submit', userController.editWorkout)
 
-// router.get('/log', userController.viewLog)
-// router.get('/', userController.getUser)
-
 
 module.exports = router

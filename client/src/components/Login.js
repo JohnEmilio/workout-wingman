@@ -47,8 +47,12 @@ export default function Login() {
             const data = await res.json()
             sessionStorage.setItem('authUser', data.msg)
             sessionStorage.setItem('userId', data.userId)
+            console.log(data)
             if (data.msg) {
                 window.location.reload()
+            }
+            else{
+                alert(data.text)
             }
         } catch (err) {
             console.error(err)
@@ -101,6 +105,7 @@ export default function Login() {
                             className="loginInput"
                             id="loginEmailInput"
                             onChange={(event) => handleUserInfo(event)}
+                            
                         />
                         <input
                             value={userInfo.password}
@@ -110,6 +115,7 @@ export default function Login() {
                             className="loginInput"
                             id="loginPasswordInput"
                             onChange={(event) => handleUserInfo(event)}
+                            
                         />
                         <button className="loginInput exerciseBtn" onClick={(e) => userLogin(e)}>Log in</button>
                     </form>
@@ -125,6 +131,7 @@ export default function Login() {
                             className="loginInput"
                             id="registerEmailInput"
                             onChange={(e) => handleNewUserInfo(e)}
+                            
                         />
                         <input
                             value={newUserInfo.firstName}
@@ -134,6 +141,7 @@ export default function Login() {
                             className="loginInput"
                             id="registerFirstNameInput"
                             onChange={(e) => handleNewUserInfo(e)}
+                            
                         />
                         <input
                             value={newUserInfo.lastName}
@@ -143,6 +151,7 @@ export default function Login() {
                             className="loginInput"
                             id="registerLastNameInput"
                             onChange={(e) => handleNewUserInfo(e)}
+                            
                         />
                         <input
                             value={newUserInfo.password}
@@ -152,6 +161,7 @@ export default function Login() {
                             className="loginInput"
                             id="registerPasswordInput"
                             onChange={(e) => handleNewUserInfo(e)}
+                            
                         />
                         <button className="loginInput exerciseBtn" onClick={(e) => registerUser(e)}>Register</button>
                     </form>

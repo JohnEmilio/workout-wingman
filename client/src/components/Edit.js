@@ -52,8 +52,9 @@ export default function Exercises() {
         }
         getWorkoutToEdit()
         fetchExericseData()
+        
     }, [])
-
+    
     function handleChange(e) {
         const { name, value } = e.target
 
@@ -82,13 +83,11 @@ export default function Exercises() {
             }
         })
     }
-    // }[...prevList, { name: exerciseName, id: nanoid(), sets: 0, reps: 0 }])
 
     function changeSetAndReps(e) {
         const val = Number(e.target.value)
         const name = e.target.name
         const parentId = e.target.parentNode.id
-
         setCurrentWorkoutList(prevList => {
             return {
                 date: prevList.date,
@@ -228,6 +227,7 @@ export default function Exercises() {
                                     type="number"
                                     id="numOfSets"
                                     name="sets"
+                                    value={exercise.sets}
                                     onChange={(e) => changeSetAndReps(e)}
                                 />
                                 <label htmlFor="sets"># of Sets</label>
@@ -239,6 +239,7 @@ export default function Exercises() {
                                     type="number"
                                     id="numOfReps"
                                     name="reps"
+                                    value={exercise.reps}
                                     onChange={(e) => changeSetAndReps(e)}
                                 />
                                 <label htmlFor="reps"># of Reps</label>
