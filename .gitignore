@@ -1,5 +1,2 @@
 /node_modules
-/config
 config.env
-db.js
-./config/config.env
